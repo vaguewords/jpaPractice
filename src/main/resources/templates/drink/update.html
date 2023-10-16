@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/drink/update" method="post">
+    <label for="drinkCode">수정할 음료 번호</label><input type="text" name="drinkCode" id="drinkCode"><br>
+    <label for="drinkName">이름</label><input type="text" name="drinkName" id="drinkName"><br>
+    <input type="submit" value="수정">
+</form>
+<script>
+    fetch('/drink/type')
+        .then(res => res.json())
+        .then(data => {
+            const $categoryCode = document.getElementById('typeCode');
+            for(let index in data) {
+                const $option = document.createElement('option');
+                $option.value = data[index].typeCode;
+                $option.textContent = data[index].typeName;
+
+                $categoryCode.appendChild($option);
+            }
+        })
+</script>
+</body>
+</html>

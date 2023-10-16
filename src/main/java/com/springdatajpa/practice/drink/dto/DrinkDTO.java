@@ -1,7 +1,6 @@
-package com.springdatajpa.practice.product.dto;
+package com.springdatajpa.practice.drink.dto;
 
 import lombok.*;
-import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -10,9 +9,10 @@ import org.springframework.stereotype.Service;
 @ToString
 public class DrinkDTO {
     private int drinkCode;
-    private int drinkName;
+    private String drinkName;
+    private int drinkPrice;
     private int calorie;
     private int sugar;
     private int fat;
-    private int drinkTypeCode;
+    private int typeCode;
 }

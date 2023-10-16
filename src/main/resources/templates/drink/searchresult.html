@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>가격</th>
+        <th>분류</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="drink : ${drinkList}">
+        <td th:text="${drink.drinkCode}"></td>
+        <td th:text="${drink.drinkName}"></td>
+        <td th:text="${drink.drinkPrice}"></td>
+        <td th:text="${drink.typeCode}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

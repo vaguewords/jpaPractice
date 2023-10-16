@@ -1,18 +1,18 @@
-package com.springdatajpa.practice.product.entity;
+package com.springdatajpa.practice.drink.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity(name = "drink")
 @Table(name = "tbl_drink")
 public class Drink {
     @Id
     @Column(name = "drink_code")
-    private int coffeeCode;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int drinkCode;
     @Column(name = "drink_name")
-    private int coffeeName;
+    private String drinkName;
+    @Column(name = "drink_price")
+    private int drinkPrice;
     @Column(name = "calorie")
     private int calorie;
     @Column(name = "sugar")
@@ -24,29 +24,37 @@ public class Drink {
 
     protected Drink() {}
 
-    public Drink(int coffeeCode, int coffeeName, int calorie, int sugar, int fat, int typeCode) {
-        this.coffeeCode = coffeeCode;
-        this.coffeeName = coffeeName;
+    public Drink(int drinkCode, String drinkName, int calorie, int sugar, int fat, int typeCode) {
+        this.drinkCode = drinkCode;
+        this.drinkName = drinkName;
         this.calorie = calorie;
         this.sugar = sugar;
         this.fat = fat;
         this.typeCode = typeCode;
     }
 
-    public int getCoffeeCode() {
-        return coffeeCode;
+    public int getDrinkCode() {
+        return drinkCode;
     }
 
-    public void setCoffeeCode(int coffeeCode) {
-        this.coffeeCode = coffeeCode;
+    public void setDrinkCode(int drinkCode) {
+        this.drinkCode = drinkCode;
     }
 
-    public int getCoffeeName() {
-        return coffeeName;
+    public String getDrinkName() {
+        return drinkName;
     }
 
-    public void setCoffeeName(int coffeeName) {
-        this.coffeeName = coffeeName;
+    public void setDrinkName(String drinkName) {
+        this.drinkName = drinkName;
+    }
+
+    public int getDrinkPrice() {
+        return drinkPrice;
+    }
+
+    public void setDrinkPrice(int drinkPrice) {
+        this.drinkPrice = drinkPrice;
     }
 
     public int getCalorie() {
@@ -84,8 +92,9 @@ public class Drink {
     @Override
     public String toString() {
         return "Drink{" +
-                "coffeeCode=" + coffeeCode +
-                ", coffeeName=" + coffeeName +
+                "drinkCode=" + drinkCode +
+                ", drinkName='" + drinkName + '\'' +
+                ", drinkPrice=" + drinkPrice +
                 ", calorie=" + calorie +
                 ", sugar=" + sugar +
                 ", fat=" + fat +
