@@ -3,13 +3,13 @@ package com.springdatajpa.practice.drink.dto;
 
 public class TypeDTO {
     private int typeCode;
-    private int typeName;
+    private String typeName;
 
 
     public TypeDTO() {
     }
 
-    public TypeDTO(int typeCode, int typeName) {
+    public TypeDTO(int typeCode, String typeName) {
         this.typeCode = typeCode;
         this.typeName = typeName;
     }
@@ -18,7 +18,7 @@ public class TypeDTO {
         return typeCode;
     }
 
-    public int getTypeName() {
+    public String getTypeName() {
         return typeName;
     }
 
@@ -26,7 +26,7 @@ public class TypeDTO {
         this.typeCode = typeCode;
     }
 
-    public void setTypeName(int typeName) {
+    public void setTypeName(String typeName) {
         this.typeName = typeName;
     }
 

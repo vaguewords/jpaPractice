@@ -10,6 +10,15 @@
 <form action="/drink/update" method="post">
     <label for="drinkCode">수정할 음료 번호</label><input type="text" name="drinkCode" id="drinkCode"><br>
     <label for="drinkName">이름</label><input type="text" name="drinkName" id="drinkName"><br>
+    <label for="drinkPrice">가격</label><input type="number" name="drinkPrice" id="drinkPrice"><br>
+    <label for="sugar">당류</label><input type="number" name="sugar" id="sugar"><br>
+    <label for="fat">지방</label><input type="number" name="fat" id="fat"><br>
+    <label for="calorie">칼로리</label><input type="number" name="calorie" id="calorie"><br>
+    <label for="typeCode">구분</label>
+    <select id="typeCode" name="typeCode">
+        <option value="1">커피</option>
+        <option value="2">논커피</option>
+    </select><br>
     <input type="submit" value="수정">
 </form>
 <script>

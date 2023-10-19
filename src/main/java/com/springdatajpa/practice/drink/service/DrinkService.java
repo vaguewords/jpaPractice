@@ -72,6 +72,11 @@ public class DrinkService {
     public void modifyDrink(DrinkDTO modifyDrink) {
         Drink foundDrink = drinkRepository.findById(modifyDrink.getDrinkCode()).orElseThrow(IllegalArgumentException::new);
         foundDrink.setDrinkName(modifyDrink.getDrinkName());
+        foundDrink.setDrinkPrice(modifyDrink.getDrinkPrice());
+        foundDrink.setCalorie(modifyDrink.getCalorie());
+        foundDrink.setFat(modifyDrink.getFat());
+        foundDrink.setSugar(modifyDrink.getSugar());
+        foundDrink.setTypeCode(modifyDrink.getTypeCode());
     }
 
     @Transactional
