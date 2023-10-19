@@ -1,25 +1,36 @@
 package com.springdatajpa.practice.drink.entity;
 
+import com.sun.istack.NotNull;
+import lombok.NonNull;
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.*;
 
-@Entity(name = "drink")
+@Entity(name = "tbl_drink")
 @Table(name = "tbl_drink")
 public class Drink {
     @Id
     @Column(name = "drink_code")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@ColumnDefault()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int drinkCode;
     @Column(name = "drink_name")
+    @NotNull
     private String drinkName;
     @Column(name = "drink_price")
+    @NotNull
     private int drinkPrice;
     @Column(name = "calorie")
+    @NotNull
     private int calorie;
     @Column(name = "sugar")
+    @NotNull
     private int sugar;
     @Column(name = "fat")
+    @NotNull
     private int fat;
     @Column(name = "type_code")
+    @NotNull
     private int typeCode;
 
     protected Drink() {}

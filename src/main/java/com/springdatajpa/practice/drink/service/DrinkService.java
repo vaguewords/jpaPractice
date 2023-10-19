@@ -64,7 +64,6 @@ public class DrinkService {
 
     @Transactional
     public void registNewDrink(DrinkDTO newDrink) {
-        System.out.println(drinkRepository.save(modelMapper.map(newDrink, Drink.class)));
         drinkRepository.save(modelMapper.map(newDrink, Drink.class));
 
     }

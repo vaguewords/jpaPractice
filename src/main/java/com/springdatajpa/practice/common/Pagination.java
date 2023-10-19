@@ -20,4 +20,5 @@ public class Pagination {
 
         return new PagingButton(currentPage, startPage, endPage);
     }
+
 }

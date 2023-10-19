@@ -88,7 +88,7 @@ public class DrinkController {
         return "redirect:/drink/findall";
     }
 
-    @GetMapping("/modify")
+    @GetMapping("/update")
     public void modifyPage() {}
 
     @PostMapping("/update")

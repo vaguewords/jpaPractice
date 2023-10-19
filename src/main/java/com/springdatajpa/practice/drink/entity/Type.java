@@ -1,15 +1,13 @@
 package com.springdatajpa.practice.drink.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity(name = "type")
+@Entity(name = "tbl_type")
 @Table(name = "tbl_type")
 public class Type {
     @Id
     @Column(name = "type_code")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int typeCode;
     @Column(name = "type_name")
     private String typeName;

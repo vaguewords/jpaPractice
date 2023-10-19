@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<h1>메뉴 등록</h1>
 <form action="/drink/insert" method="post">
     <label for="drinkName">음료 이름</label><input type="text" name="drinkName" id="drinkName"><br>
     <label for="drinkPrice">가격</label><input type="number" name="drinkPrice" id="drinkPrice"><br>
@@ -19,19 +20,6 @@
 
     <input type="submit" value="등록">
 </form>
-<script>
-    fetch('/drink/type')
-        .then(res => res.json())
-        .then(data => {
-            const $typeCode = document.getElementById('typeCode');
-            for(let index in data) {
-                const $option = document.createElement('option');
-                $option.value = data[index].typeCode;
-                $option.textContent = data[index].typeName;
 
-                $typeCode.appendChild($option);
-            }
-        })
-</script>
 </body>
 </html>

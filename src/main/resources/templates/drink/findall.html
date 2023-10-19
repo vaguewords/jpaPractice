@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-<h1>전체메뉴</h1>
+<h1>전체 메뉴 조회</h1>
 <table>
     <thead>
     <tr>
@@ -47,24 +47,36 @@
 </table>
 
 <div id="paging">
-    <!--go first-->
-    <button th:onclick="'location.href=\'/drink/list?page=' + ${ paging.startPage } + '\''">
+    <!-- 맨앞 페이지로 이동 -->
+    <button th:onclick="'location.href=\'/drink/findall?page=' + ${ paging.startPage } + '\''">
+        ⏪
+    </button>
+
+    <!-- 이전 페이지로 이동 -->
+    <button th:onclick="'location.href=\'/drink/findall?page=' + ${ paging.currentPage - 1 } + '\''"
+            th:disabled="${ drinkList.first }">
         ◀
     </button>
-    <!--prev-->
-    <button th:onclick="'location.href=\'/drink/list?page=' + ${paging.currentPage - 1} + '\''" th:disabled="${drinkList.first}"><</button>
-    <!--numbers-->
+
     <!-- 숫자 버튼 -->
     <th:block th:each="page : ${ #numbers.sequence(paging.startPage, paging.endPage) }">
-        <button th:onclick="'location.href=\'/drink/list?page=' + ${ page } + '\''"
+        <button th:onclick="'location.href=\'/drink/findall?page=' + ${ page } + '\''"
                 th:text="${ page }"
                 th:disabled="${ paging.currentPage eq page }">
+
         </button>
     </th:block>
-    <!--next-->
-    <button th:onclick="'location.href=\'/drink/list?page=' + ${paging.currentPage + 1} + '\''" th:disabled="${drinkList.last}">></button>
-    <!--go last-->
-    <button th:onclick="'location.href=\'/drink/list?page=' + ${paging.endPage} + '\''">▶</button>
+    <!-- 다음 페이지로 이동 -->
+    <button th:onclick="'location.href=\'/drink/findall?page=' + ${ paging.currentPage + 1 } + '\''"
+            th:disabled="${ drinkList.last }">
+        ▶
+    </button>
+
+    <!-- 맨뒤 페이지로 이동 -->
+    <button th:onclick="'location.href=\'/drink/findall?page=' + ${ paging.endPage } + '\''">
+        ⏩
+    </button>
+
 </div>
 
 </body>

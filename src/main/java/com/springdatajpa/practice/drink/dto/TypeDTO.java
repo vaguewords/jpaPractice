@@ -22,6 +22,14 @@ public class TypeDTO {
         return typeName;
     }
 
+    public void setTypeCode(int typeCode) {
+        this.typeCode = typeCode;
+    }
+
+    public void setTypeName(int typeName) {
+        this.typeName = typeName;
+    }
+
     @Override
     public String toString() {
         return "TypeDTO{" +

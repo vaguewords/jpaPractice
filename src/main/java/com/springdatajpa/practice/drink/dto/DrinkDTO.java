@@ -51,6 +51,34 @@ public class DrinkDTO {
         return typeCode;
     }
 
+    public void setDrinkCode(int drinkCode) {
+        this.drinkCode = drinkCode;
+    }
+
+    public void setDrinkName(String drinkName) {
+        this.drinkName = drinkName;
+    }
+
+    public void setDrinkPrice(int drinkPrice) {
+        this.drinkPrice = drinkPrice;
+    }
+
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
+    }
+
+    public void setSugar(int sugar) {
+        this.sugar = sugar;
+    }
+
+    public void setFat(int fat) {
+        this.fat = fat;
+    }
+
+    public void setTypeCode(int typeCode) {
+        this.typeCode = typeCode;
+    }
+
     @Override
     public String toString() {
         return "DrinkDTO{" +
