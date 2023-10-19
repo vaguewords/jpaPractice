@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>메뉴 등록</h1>
+<div th:insert="menu"></div>
 <form action="/drink/insert" method="post">
     <label for="drinkName">음료 이름</label><input type="text" name="drinkName" id="drinkName"><br>
     <label for="drinkPrice">가격</label><input type="number" name="drinkPrice" id="drinkPrice"><br>

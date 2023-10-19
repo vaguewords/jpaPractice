@@ -20,6 +20,7 @@
 </head>
 <body>
 <h1>전체 메뉴 조회</h1>
+<div th:insert="menu"></div>
 <table>
     <thead>
     <tr>
@@ -29,7 +30,6 @@
         <th>열량</th>
         <th>당류</th>
         <th>지방</th>
-        <th>구분</th>
     </tr>
     </thead>
     <tbody>
@@ -40,7 +40,6 @@
         <td th:text="${drink.calorie}"></td>
         <td th:text="${drink.sugar}"></td>
         <td th:text="${drink.fat}"></td>
-        <td th:text="${drink.typeCode}"></td>
     </tr>
 
     </tbody>
@@ -49,7 +48,7 @@
 <div id="paging">
     <!-- 맨앞 페이지로 이동 -->
     <button th:onclick="'location.href=\'/drink/findall?page=' + ${ paging.startPage } + '\''">
-        ⏪
+        ◀◀
     </button>
 
     <!-- 이전 페이지로 이동 -->
@@ -74,7 +73,7 @@
 
     <!-- 맨뒤 페이지로 이동 -->
     <button th:onclick="'location.href=\'/drink/findall?page=' + ${ paging.endPage } + '\''">
-        ⏩
+        ▶▶
     </button>
 
 </div>

@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table {
+            margin: 0;
+            border-collapse: collapse;
+        }
+        table * {
+            border: solid 1px #ccc;
+        }
+        th, td {
+            padding: .5rem
+        }
+    </style>
 </head>
 <body>
 <h1>쿼리 메소드 수행 결과</h1>
+<div th:insert="menu"></div>
 <table>
     <thead>
     <tr>
@@ -24,5 +37,6 @@
     </tr>
     </tbody>
 </table>
+
 </body>
 </html>

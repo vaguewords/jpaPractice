@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>메뉴 삭제</h1>
+<div th:insert="menu"></div>
 <form action="/drink/delete" method="post">
     <label>삭제할 음료 번호 입력</label>
     <input type="number" name="drinkCode"><br>
