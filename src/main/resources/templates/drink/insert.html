@@ -20,6 +20,19 @@
 
     <input type="submit" value="등록">
 </form>
+<script>
+    fetch('/drink/type')
+        .then(res => res.json())
+        .then(data => {
+            const $typeCode = document.getElementById('typeCode');
+            for(let index in data) {
+                const $option = document.createElement('option');
+                $option.value = data[index].typeCode;
+                $option.textContent = data[index].typeName;
 
+                $typeCode.appendChild($option);
+            }
+        })
+</script>
 </body>
 </html>

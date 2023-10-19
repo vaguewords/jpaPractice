@@ -2,7 +2,7 @@ package com.springdatajpa.practice.drink.entity;
 
 import javax.persistence.*;
 
-@Entity(name = "tbl_type")
+@Entity(name = "type")
 @Table(name = "tbl_type")
 public class Type {
     @Id

@@ -6,7 +6,7 @@ import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
-@Entity(name = "tbl_drink")
+@Entity(name = "drink")
 @Table(name = "tbl_drink")
 public class Drink {
     @Id
